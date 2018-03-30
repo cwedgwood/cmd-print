@@ -1,4 +1,6 @@
-# -*- conf -*-
+# Dockerfile for cmd-print					-*- conf -*-
+#
+# A small program to print out argv[]
 
 FROM scratch
 ADD /cmd-print /
