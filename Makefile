@@ -17,6 +17,6 @@ container:
 
 
 clean:
-	rm -f *~ cmd-print
+	rm -f *~
 
 .PHONY: all container clean
