@@ -2,21 +2,19 @@
 CC=musl-gcc -Os -Wall
 CFLAGS=-static
 
-all: cmd-print container
+all: cmd-print
 
 container:
-	strip cmd-print
 	sudo docker build -t cmd-print .
 	@echo
-	sudo docker images
+	sudo docker images | grep cmd-print
 	@echo
 	sudo docker run --rm cmd-print
 	@echo
 	sudo docker run --rm cmd-print passed-arg1 passed-arg2
 	@echo
 
-
 clean:
-	rm -f *~
+	rm -f *~ cmd-print
 
 .PHONY: all container clean
