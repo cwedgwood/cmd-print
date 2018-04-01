@@ -4,6 +4,9 @@ CFLAGS=-static
 
 all: cmd-print
 
+stripped: cmd-print
+	strip $^
+
 container:
 	sudo docker build -t cmd-print .
 	@echo
