@@ -1,11 +1,10 @@
 
-CC=musl-gcc -Os -Wall
-CFLAGS=-static
+CC=musl-gcc
+LD=musl-ld
+CFLAGS=-Wall -Os
+LDFLAGS=-static -s
 
 all: cmd-print
-
-stripped: cmd-print
-	strip $^
 
 container:
 	sudo docker build -t cmd-print .
@@ -18,6 +17,6 @@ container:
 	@echo
 
 clean:
-	rm -f *~ cmd-print
+	rm -f *~ cmd-print *.o
 
 .PHONY: all container clean

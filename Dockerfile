@@ -7,7 +7,7 @@ FROM cwedgwood/bldr:0.01
 RUN mkdir -p /build/
 WORKDIR /build/
 COPY . .
-RUN make stripped
+RUN make cmd-print
 
 
 FROM scratch
