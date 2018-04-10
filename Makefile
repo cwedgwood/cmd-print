@@ -1,6 +1,5 @@
 
-CC=musl-gcc
-LD=musl-ld
+CC=klcc
 CFLAGS=-Wall -Os
 LDFLAGS=-static -s
 
