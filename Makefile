@@ -8,7 +8,7 @@ all: cmd-print
 container:
 	sudo docker build -t cmd-print .
 	@echo
-	sudo docker images | grep cmd-print
+	sudo docker images cmd-print
 	@echo
 	sudo docker run --rm cmd-print
 	@echo
