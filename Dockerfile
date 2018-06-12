@@ -2,7 +2,7 @@
 #
 # A small program to print out argv[]
 
-FROM cwedgwood/bldr:0.02
+FROM cwedgwood/bldr:0.03
 
 RUN mkdir -p /build/
 WORKDIR /build/
